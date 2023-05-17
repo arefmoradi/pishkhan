@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/pishkhan/static/css/main.55fbdfaf.css",
+    "main.js": "/pishkhan/static/js/main.bff3caf7.js",
+    "static/media/Lalezar-Regular.eot": "/pishkhan/static/media/Lalezar-Regular.215016233fb93ef01bf0.eot",
+    "static/media/Lalezar-Regular.ttf": "/pishkhan/static/media/Lalezar-Regular.eb510cb4bd16d964abbd.ttf",
+    "static/media/logo.png": "/pishkhan/static/media/logo.e148933d7b972825cb5d.png",
+    "static/media/mizkhadamat.jpg": "/pishkhan/static/media/mizkhadamat.35bb6c3afc445b5dcbf6.jpg",
+    "static/media/ahwaz3.jpg": "/pishkhan/static/media/ahwaz3.df3b47e4b27e808c0643.jpg",
+    "static/media/zendegi.jpg": "/pishkhan/static/media/zendegi.0bc5571c16628fc02046.jpg",
+    "static/media/ahwazgardi.jpg": "/pishkhan/static/media/ahwazgardi.39c0b0dbb18719911b53.jpg",
+    "static/media/Lalezar-Regular.woff": "/pishkhan/static/media/Lalezar-Regular.bdd41bb04cfe9e24a663.woff",
+    "static/media/ahwaz1.jpg": "/pishkhan/static/media/ahwaz1.c5d7cc7ef1d0328f1d5b.jpg",
+    "static/media/ahwaz2.jpg": "/pishkhan/static/media/ahwaz2.734c9a4449f950466e85.jpg",
+    "static/media/Lalezar-Regular.woff2": "/pishkhan/static/media/Lalezar-Regular.78b354449526055b10b9.woff2",
+    "static/media/IRANSansX-Bold.eot": "/pishkhan/static/media/IRANSansX-Bold.ec3938fbb435df07f7a6.eot",
+    "static/media/IRANSansX-Bold.ttf": "/pishkhan/static/media/IRANSansX-Bold.ac274b48e61540411df8.ttf",
+    "static/media/IRANSansX-Bold.woff": "/pishkhan/static/media/IRANSansX-Bold.2b056f4544401b91a5f9.woff",
+    "static/media/IRANSansX-Bold.woff2": "/pishkhan/static/media/IRANSansX-Bold.3722ffcecd06e3c774e4.woff2",
+    "static/media/bazzar.png": "/pishkhan/static/media/bazzar.3629881aea46d13bcff2.png",
+    "static/media/google.png": "/pishkhan/static/media/google.14a665e6f61b8b2ea8c9.png",
+    "static/media/slick.svg": "/pishkhan/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/pishkhan/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/pishkhan/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/pishkhan/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/pishkhan/index.html",
+    "main.55fbdfaf.css.map": "/pishkhan/static/css/main.55fbdfaf.css.map",
+    "main.bff3caf7.js.map": "/pishkhan/static/js/main.bff3caf7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55fbdfaf.css",
+    "static/js/main.bff3caf7.js"
+  ]
+}
