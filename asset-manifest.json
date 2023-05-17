@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pishkhan/static/css/main.55fbdfaf.css",
-    "main.js": "/pishkhan/static/js/main.714a67ee.js",
+    "main.js": "/pishkhan/static/js/main.8f1608e1.js",
     "static/media/Lalezar-Regular.eot": "/pishkhan/static/media/Lalezar-Regular.215016233fb93ef01bf0.eot",
     "static/media/Lalezar-Regular.ttf": "/pishkhan/static/media/Lalezar-Regular.eb510cb4bd16d964abbd.ttf",
     "static/media/logo.png": "/pishkhan/static/media/logo.e148933d7b972825cb5d.png",
@@ -25,10 +25,10 @@
     "static/media/slick.woff": "/pishkhan/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/pishkhan/index.html",
     "main.55fbdfaf.css.map": "/pishkhan/static/css/main.55fbdfaf.css.map",
-    "main.714a67ee.js.map": "/pishkhan/static/js/main.714a67ee.js.map"
+    "main.8f1608e1.js.map": "/pishkhan/static/js/main.8f1608e1.js.map"
   },
   "entrypoints": [
     "static/css/main.55fbdfaf.css",
-    "static/js/main.714a67ee.js"
+    "static/js/main.8f1608e1.js"
   ]
 }
