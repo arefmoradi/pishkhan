@@ -14,7 +14,7 @@ export default function PersianDatePicker() {
           <DatePicker sx={{
                 backgroundColor: "rgba(255,255,255,0.23)",
                 backdropFilter: `blur(10px)`,
-          }} localeText={faIRPickers} defaultValue={new Date(2022, 1, 1)} />
+          }} localeText={faIRPickers} defaultValue={new Date()} />
 
         </LocalizationProvider>
     </>
