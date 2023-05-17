@@ -15,7 +15,7 @@ const Card3d = () => {
                         <h1 style={{textAlign: "center"}}> پیشخوان <br />خدمات شهری</h1>
                         {/* <span className="price">$35</span> */}
                         <div className="card-back" style={{backgroundColor: 'transparent'}}>
-                            <a href=""> ورود به پیشخوان شهرداری</a>
+                            <a> ورود به پیشخوان شهرداری</a>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@ const Card3d = () => {
                     {/* <h1> تجربه <br /> زندگی در اهواز </h1> */}
 					{/* <span className="price">$74</span> */}
 					<div className="card-back">
-						<a href=""> دلایل زندگی در اهواز </a>
+						<a> دلایل زندگی در اهواز </a>
 					</div>
 				</div>
 			</div>
@@ -40,7 +40,7 @@ const Card3d = () => {
 					<h1  style={{textAlign: "center"}}> لذت  <br /> اهواز گردی </h1>
 					{/* <span className="price">$155</span> */}
 					<div className="card-back">
-						<a href=""> لیست مکان های گردشگری</a>
+						<a> لیست مکان های گردشگری</a>
 					</div>
 				</div>
 			</div>
