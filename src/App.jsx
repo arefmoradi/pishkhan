@@ -38,10 +38,12 @@ const App = () => {
   }, []);
 
   return (
+
     <>
+        <Navbar />
        <Routes>
         <Route path='/form' element={<FormPage />}/>
-        <Route path='/' index element={<> <Navbar /> <SlickImage /> <IndexPage /> <Card3d /> <Footer /> <ButtonNavigation /> </>}/>
+        <Route path='/' index element={<>  <SlickImage /> <IndexPage /> <Card3d /> <Footer /> <ButtonNavigation /> </>}/>
        </Routes>
     </>
 

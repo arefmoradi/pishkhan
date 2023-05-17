@@ -4,7 +4,7 @@ import DetailFormPage from './DetailFormPage'
 const FormPage = () => {
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
     <DetailFormPage />
 
     {/* <Footer /> */}

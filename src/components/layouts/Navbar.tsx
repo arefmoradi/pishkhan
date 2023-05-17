@@ -2,10 +2,12 @@ import { Box, Container, Typography, AppBar } from '@mui/material'
 import { useEffect, useState } from 'react'
 import SearchBox from './extraComponents/SearchBox'
 import AvatarSection from './extraComponents/AvatarSection'
+import { useNavigate } from 'react-router-dom'
 
 
 
 const Navbar = () => {
+    const navigate = useNavigate();
     const img = require("../../assets/images/logo.png")
     const [navbarScroll, setNavbarScroll] = useState({ 
         backdropFilter: `blur(10px)`, transition: '0.4s', 
@@ -43,7 +45,7 @@ const Navbar = () => {
     }}
     >
         <Container  sx={{height: "50px" ,display: "flex", justifyContent: "space-between" , alignItems: "center", alignContent: "center"}}>
-            <Box>
+            <Box onClick={() => navigate("/")}>
                 <Box display={"flex"} alignItems="center">
                 <img src={img} alt="تصویر لوگو" width="30px" height="30px" />
                     <Typography display={{xs:"none", md:"inline"}} marginLeft={1} color="#f5f5f5">  پیشخوان اکسین  </Typography>
