@@ -24,6 +24,7 @@ const AvatarSection = () => {
       color='white'
           id="basic-button"
           onClick={handleClick}
+          sx={{width: "34px", height:'34px', color: "white"}}
       > a </StyledAvatar>
     </Tooltip>
 

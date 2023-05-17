@@ -48,7 +48,7 @@ const Navbar = () => {
             <Box onClick={() => navigate("/")}>
                 <Box display={"flex"} alignItems="center">
                 <img src={img} alt="تصویر لوگو" width="30px" height="30px" />
-                    <Typography display={{xs:"none", md:"inline"}} marginLeft={1} color="#f5f5f5">  پیشخوان اکسین  </Typography>
+                    <Typography marginLeft={.7} color="#f5f5f5">  پیشخوان اکسین  </Typography>
                 </Box>
             </Box>
     

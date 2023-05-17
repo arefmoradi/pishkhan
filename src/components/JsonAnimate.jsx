@@ -2,7 +2,7 @@ import { Player } from '@lottiefiles/react-lottie-player'
 import { Box } from '@mui/material'
 import React from 'react'
 
-const JsonAnimate = ({src}) => {
+const JsonAnimate = ({src, hover}) => {
   return (
     <Box sx={{
         borderRadius: "12px",
@@ -13,8 +13,7 @@ const JsonAnimate = ({src}) => {
         <Player 
         style={{width: "100px", height: "100px" , padding: "2px"}}
         src={src}
-        hover
-
+    hover
         />
 
     </Box>

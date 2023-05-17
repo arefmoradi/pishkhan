@@ -30,7 +30,7 @@ const SearchBox = () => {
       noOptionsText="موردی یافت نشد"
       options={options}
       getOptionLabel={(option:any) => option.title}
-      renderInput={(params:any) => <TextField sx={{width: {xs:"170px", sm:"200px", md:"240px"}}} {...params} placeholder="جستجو ..." />}
+      renderInput={(params:any) => <TextField sx={{width: {xs:"130px", sm:"200px", md:"240px"}}} {...params} placeholder="جستجو ..." />}
       onInputChange={handleSearch}
     />
 
