@@ -1,4 +1,4 @@
-import { Container, FormControl, RadioGroup, Typography ,Radio, FormControlLabel, Input} from '@mui/material'
+import { Container, FormControl, RadioGroup, Typography ,Radio, FormControlLabel, Input, IconButton} from '@mui/material'
 import { Box } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 import { LoadingButton } from '@mui/lab'
@@ -6,6 +6,7 @@ import Webcam from "react-webcam";
 import { InputBaseForm } from '../styles/Pages/form.page.style'
 import { useRef, useState } from 'react'
 import PersianDatePicker from '../components/DatePicker'
+import { Camera, PhotoCamera } from '@mui/icons-material';
 
 
 
@@ -116,16 +117,16 @@ const DetailFormPage = () => {
 
                     </Box>
                 </Grid>    
-                <input type="file" accept="image/*;capture=camera" />
 
-                        <Grid xs={12} sm={6}>
-                    <Box display={"flex"} flexDirection={"column"} >
-                    <button onClick={startCamera}>Start Camera</button>
-                    <button onClick={takePhoto}>Take Photo</button>
-                    <video ref={videoRef} autoPlay />
-                    {imgSrc && <img src={imgSrc} alt="Captured Image" />}
- 
-                    </Box>
+                        <Grid xs={12} sm={6} sx={{ display: {xs: 'inline-block' , sm: "none"} }}>
+
+                            <IconButton sx={{ display: "flex" , justifyContent: "center" }} aria-label="upload picture" component="label">
+                            <input hidden accept="image/*" type="file" />
+                            <PhotoCamera fontSize="large" />
+                            </IconButton>
+
+
+
                 </Grid>                
 
                 <LoadingButton loadingIndicator="لطفا صبر کنید"  sx={{margin: "10px" }} fullWidth variant="contained"> استعلام  </LoadingButton>
