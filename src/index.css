@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: 'IRANSans';
+    src: url("assets/fonts/IRANSansX-Bold.eot");
+    src: url('assets/fonts/IRANSansX-Bold.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/IRANSansX-Bold.woff2') format('woff2'),
+        url('assets/fonts/IRANSansX-Bold.woff') format('woff'),
+        url('assets/fonts/IRANSansX-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: 'Lalezar';
+    src: url('assets/fonts/Lalezar-Regular.eot');
+    src: url('assets/fonts/Lalezar-Regular.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/Lalezar-Regular.woff2') format('woff2'),
+        url('assets/fonts/Lalezar-Regular.woff') format('woff'),
+        url('assets/fonts/Lalezar-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
+
+body {
+
+  /* background-image: url("./assets//images/ahwaz1.jpg"); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+    display: none;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #6098ab;
+    border-radius: 20px;
+    border: 15px solid transparent;
+    display: inline;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #6098ab;
+  }
+
+  .overlay:hover {
+    opacity: 0.7;
+    filter: brightness(1.2);
+  }
