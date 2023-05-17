@@ -10,22 +10,31 @@ import PersianDatePicker from '../components/DatePicker'
 
 
 const DetailFormPage = () => {
+    const [imgSrc, setImgSrc] = useState<string | null>(null);
     const videoRef = useRef<HTMLVideoElement>(null);
-    const [load, setLoad] = useState<Boolean>(false);
-
-
-    async function handleButtonClick(): Promise<void> {
-        try {
-          const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-          if (videoRef.current) {
-            videoRef.current.srcObject = stream;
-          }
-        } catch (err) {
-          console.error('Error accessing camera:', err);
+  
+    // Access the camera stream and set it as the source for the video element
+    const startCamera = async () => {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: "environment" } } });
+        if (videoRef.current) {
+          videoRef.current.srcObject = stream;
         }
+      } catch (error) {
+        console.log(error);
       }
-
-
+    };
+  
+    // Take a photo from the current video frame and set as the imgSrc state
+    const takePhoto = () => {
+      const canvas = document.createElement('canvas');
+      if (!videoRef.current) return;
+      canvas.width = videoRef.current.videoWidth;
+      canvas.height = videoRef.current.videoHeight;
+      canvas.getContext('2d')!.drawImage(videoRef.current, 0, 0);
+      const photo = canvas.toDataURL('image/png');
+      setImgSrc(photo);
+    };
   return (
     <Container>
         <Box m={2} sx={{
@@ -110,12 +119,15 @@ const DetailFormPage = () => {
 
                         <Grid xs={12} sm={6}>
                     <Box display={"flex"} flexDirection={"column"} >
-                    <button onClick={handleButtonClick}>Open Camera</button>
-                    <video ref={videoRef} autoPlay />
+                    <button onClick={startCamera}>Start Camera</button>
+      <button onClick={takePhoto}>Take Photo</button>
+      <video ref={videoRef} autoPlay />
+      {imgSrc && <img src={imgSrc} alt="Captured Image" />}
+ 
                     </Box>
                 </Grid>                
 
-                <LoadingButton loadingIndicator="لطفا صبر کنید"  onClick={() => setLoad(true)} sx={{margin: "10px" }} fullWidth variant="contained"> استعلام  </LoadingButton>
+                <LoadingButton loadingIndicator="لطفا صبر کنید"  sx={{margin: "10px" }} fullWidth variant="contained"> استعلام  </LoadingButton>
                 {/* <LoadingButton loadingIndicator="لطفا صبر کنید" loading={Boolean(load)} onClick={() => setLoad(true)} sx={{margin: "10px" }} fullWidth variant="contained"> استعلام  </LoadingButton> */}
 
 
