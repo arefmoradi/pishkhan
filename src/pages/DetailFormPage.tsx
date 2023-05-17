@@ -116,13 +116,14 @@ const DetailFormPage = () => {
 
                     </Box>
                 </Grid>    
+                <input type="file" accept="image/*;capture=camera" />
 
                         <Grid xs={12} sm={6}>
                     <Box display={"flex"} flexDirection={"column"} >
                     <button onClick={startCamera}>Start Camera</button>
-      <button onClick={takePhoto}>Take Photo</button>
-      <video ref={videoRef} autoPlay />
-      {imgSrc && <img src={imgSrc} alt="Captured Image" />}
+                    <button onClick={takePhoto}>Take Photo</button>
+                    <video ref={videoRef} autoPlay />
+                    {imgSrc && <img src={imgSrc} alt="Captured Image" />}
  
                     </Box>
                 </Grid>                
