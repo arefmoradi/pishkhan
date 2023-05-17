@@ -1,16 +1,31 @@
-import { Container, FormControl, RadioGroup, Typography ,Radio, FormControlLabel} from '@mui/material'
+import { Container, FormControl, RadioGroup, Typography ,Radio, FormControlLabel, Input} from '@mui/material'
 import { Box } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 import { LoadingButton } from '@mui/lab'
- 
+import Webcam from "react-webcam";
 import { InputBaseForm } from '../styles/Pages/form.page.style'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import PersianDatePicker from '../components/DatePicker'
 
 
 
 const DetailFormPage = () => {
+    const videoRef = useRef<HTMLVideoElement>(null);
     const [load, setLoad] = useState<Boolean>(false);
+
+
+    async function handleButtonClick(): Promise<void> {
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+          if (videoRef.current) {
+            videoRef.current.srcObject = stream;
+          }
+        } catch (err) {
+          console.error('Error accessing camera:', err);
+        }
+      }
+
+
   return (
     <Container>
         <Box m={2} sx={{
@@ -78,6 +93,25 @@ const DetailFormPage = () => {
                         <Typography variant="caption"> تاریخ  </Typography>
                         <PersianDatePicker />
 
+                    </Box>
+                </Grid>                
+
+                          <Grid xs={12} sm={6}>
+                    <Box display={"flex"} flexDirection={"column"} >
+                        <Typography variant="caption"> تاریخ  </Typography>
+                        <Box sx={{                backgroundColor: "rgba(255,255,255,0.23)",
+                backdropFilter: `blur(10px)`, height:"55px", display:"flex" , justifyContent:"center", alignItems:"center"}} >
+                        <Input fullWidth type='file'/>
+                        </Box>
+
+
+                    </Box>
+                </Grid>    
+
+                        <Grid xs={12} sm={6}>
+                    <Box display={"flex"} flexDirection={"column"} >
+                    <button onClick={handleButtonClick}>Open Camera</button>
+                    <video ref={videoRef} autoPlay />
                     </Box>
                 </Grid>                
 
