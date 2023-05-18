@@ -1,4 +1,4 @@
-import { Container, FormControl, RadioGroup, Typography ,Radio, FormControlLabel, Input, IconButton} from '@mui/material'
+import { Container, FormControl, RadioGroup, Typography ,Radio, FormControlLabel, Input, IconButton, InputBase} from '@mui/material'
 import { Box } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 import { LoadingButton } from '@mui/lab'
@@ -6,7 +6,8 @@ import Webcam from "react-webcam";
 import { InputBaseForm } from '../styles/Pages/form.page.style'
 import { useRef, useState } from 'react'
 import PersianDatePicker from '../components/DatePicker'
-import { Camera, PhotoCamera } from '@mui/icons-material';
+import { AttachFile, Camera, FileDownloadDone, Folder, PhotoCamera } from '@mui/icons-material';
+import { toast } from 'react-toastify';
 
 
 
@@ -110,8 +111,18 @@ const DetailFormPage = () => {
                     <Box display={"flex"} flexDirection={"column"} >
                         <Typography variant="caption"> تاریخ  </Typography>
                         <Box sx={{                backgroundColor: "rgba(255,255,255,0.23)",
-                backdropFilter: `blur(10px)`, height:"55px", display:"flex" , justifyContent:"center", alignItems:"center"}} >
-                        <Input fullWidth type='file'/>
+                backdropFilter: `blur(10px)`,borderRadius: "10px" , height:"55px", display:"flex" , alignItems:"center"}} >
+                        {/* <Input fullWidth type='file'/> */}
+                        <IconButton  sx={{textAlign: "right", display: "flex", alignItems: "center",
+                        "&:hover" : { backgroundColor: "none", borderRadius: "none" }
+                    }} aria-label="upload picture" component="label">
+                            <Box display={"flex"} alignItems= "center">
+                            <input hidden accept="image/*" type="file" />
+                            <Folder  />
+                            <Typography ml={1}> پیوست تصویر صنعت </Typography>
+
+                            </Box>
+                            </IconButton>
                         </Box>
 
 
@@ -129,7 +140,7 @@ const DetailFormPage = () => {
 
                 </Grid>                
 
-                <LoadingButton loadingIndicator="لطفا صبر کنید"  sx={{margin: "10px" }} fullWidth variant="contained"> استعلام  </LoadingButton>
+                <LoadingButton onClick={() => toast.info("اطلاعات درحال ارسال است")} loadingIndicator="لطفا صبر کنید"  sx={{margin: "10px" }} fullWidth variant="contained"> استعلام  </LoadingButton>
                 {/* <LoadingButton loadingIndicator="لطفا صبر کنید" loading={Boolean(load)} onClick={() => setLoad(true)} sx={{margin: "10px" }} fullWidth variant="contained"> استعلام  </LoadingButton> */}
 
 
